@@ -7,8 +7,8 @@ app.get('/', (req, res) => {
   res.status(200).send()
 });
 
-var server = app.listen(port, () => console.log(`TDD REST API listening on port ${port}!`))
+//var server = app.listen(port, () => console.log(`TDD REST API listening on port ${port}!`))
 
 
-module.exports = { app, server} ;
+module.exports = app ;
 
