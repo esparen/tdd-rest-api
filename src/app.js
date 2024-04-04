@@ -7,8 +7,12 @@ app.get('/', (req, res) => {
   res.status(200).send()
 });
 
-//var server = app.listen(port, () => console.log(`TDD REST API listening on port ${port}!`))
-
+app.get('/users', (req, res) => {
+  const users = [
+    {name:'John Doe', email: 'email@email.com' }
+  ]
+  res.status(200).json(users);
+});
 
 module.exports = app ;
 
