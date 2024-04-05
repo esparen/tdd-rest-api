@@ -1,14 +1,18 @@
 const express = require('express');
+const consign = require('consign');
 
-const app = express();
 const port = 3001;
+const app = express();
+
+consign({ cwd: 'src', verbose: false})
+  .include('./config/middlewares.js')
+  .then('./routes')
+  .then('./config/routes.js')
+  .into(app)
 
 app.get('/', (req, res) => {
   res.status(200).send()
 });
-
-//var server = app.listen(port, () => console.log(`TDD REST API listening on port ${port}!`))
-
 
 module.exports = app ;
 
