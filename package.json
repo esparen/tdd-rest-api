@@ -7,7 +7,7 @@
     "start": "node src/server.js",
     "test": "jest --detectOpenHandles",
     "lint": "eslint src/** test/** --fix",
-    "secure-mode": "jest --watch --verbose=true"
+    "secure-mode": "jest --watch --verbose=false"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "consign": "^0.1.6",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "pg": "^8.11.5"
   }
 }
